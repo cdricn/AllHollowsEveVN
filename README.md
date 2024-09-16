@@ -1,10 +1,10 @@
 # All Hollow's Eve 
 A visual novel created using RenPy.
 
-# Build
+## Build
 (steps how to build project)
 
-# Downloads
+## Downloads
 (add links)
 
 ## Credits
