@@ -1,6 +1,9 @@
 
 label chapter_one:
-    # village house interior bg
+    $ renpy.choice_for_skipping()
+    show house_night
+    with fade
+    with vpunch
 
     An "ALEXEI!"
 
@@ -63,8 +66,10 @@ label chapter_one:
 
     An "Wait!"
 
+    $ renpy.choice_for_skipping()
+    show village_night
+    with fade
     # footsteps sfx
-    # village bg
 
     An "Hey!{w=[q]} At least tell me what that rite is.{w=[q]} Am I going to die here too?"
 
@@ -117,6 +122,8 @@ label chapter_one:
 
     An "If I ever could…{w=[q]} haaah…"
 
+    #--- Monologue 1
+
     "Saying those things brought me back to the real gravity of the situation;{w=[q]}
     as if in that brief moment I had forgotten why I was here in the first place."
     
@@ -124,8 +131,6 @@ label chapter_one:
     she still spoke to me so casually."
 
     "Everyone in the court always tensed up when speaking to me."
-
-    #---
 
     "The women stayed away from me."
 
@@ -140,3 +145,160 @@ label chapter_one:
     would I have had a good relationship with my sisters too?{w=[q]} Maybe even father?"
 
     "Maybe that could’ve quelled the loneliness I felt in that court."
+
+    "I feel ridiculous again.{w=[q]} They’re dead now, nothing I could say or do could change that."
+
+    "I only think about myself.{w=[q]} Even now all I think about is how those people would perceive me."
+
+    "I have to keep reminding myself that they’re dead.{w=[q]} I have to ensure that their memories will live on with me."
+
+    "That’s the only way to do it, right?{w=[q]} That’s grieving?"
+
+    "But why do I not really…{w=[s]} feel anything?"
+
+    Vl1 "Oh! Is that the duchess!?"
+
+    Vl1 "The duchess! She’s awake!"
+
+    Vl2 "Oh! Duchess. It is an honor."
+
+    Vl1 "It is an honor."
+
+    An "H-hello!{w=[q]} Hey wait.{w=[q]} Why are you all kneeling?"
+
+    An "You too, Trina?"
+
+    Tr "..."
+
+    #--- Monologue 2
+
+    "All kneeling, lined up all the way to the center of the village.{w=[q]}
+    This was a familiar sight, one that I saw everytime I came with my
+    family to certain villages and cities for whatever business."
+
+    "There, in the center, was a stage made of wood."
+
+    "It looked like the gallows."
+
+    "I could hear them breathe with each step.{w=[q]}
+    A minor gasp, then a vocal recognition.{w=[s]} An excitement that dwells upon them."
+    
+    "The wooden steps felt like they would give way with each step, so did the stage itself."
+
+    "It could be that the beating of my heart added weight to me."
+
+    "They all stood up in front of the stage and stared, expectant of my words."
+
+    An "U-uhm.{w=[q]} Good evening, everyone! As you may know, I am your Duchess Anastasia Konstantin."
+
+    An "As you all may know by now, my family was slaughtered by the revolutionaries that occupied this empire."
+
+    An "In their final musings, my father wished for the wellness of all people."
+
+    An "For all of us to remain safe and healthy.{w=[q]} Even those that dared to draw their blade at him."
+
+    An "This shows his resilience and integrity as a servant of the people."
+
+    An "As well as his mercy for those that dared wrong him."
+
+    An "Remember his words, that they may ring true to the depths of your soul!"
+
+    An "My mother wished for all of us to be better people."
+
+    An "One capable of forgiveness and advancement."
+
+    An "Such that we end the cycle of violence that plagues our nation, and the world itself."
+
+    An "My sisters…"
+
+    An "They were grateful for their life and wished for the people to have enjoyed all that they have enjoyed."
+
+    An "And my brother, Alexei, wishes to have served all of you."
+
+    An "As the only remaining member of the royal family,
+    it is my solemn duty to serve all of you, as my father once had."
+
+    An "I will assist in the Rite of Welcoming the Saints.{w=[q]}
+    However, I must ask for assistance from you as well."
+
+    An "The empire is no longer safe for me.{w=[q]}
+    Even now I fear for my safety here, as well as everyone else’s."
+
+    An "If you will, please assist me in taking the first train
+    to the neighboring country by tomorrow morning."
+
+    An "Make no mistake, I am not giving away the empire."
+
+    An "By my name, it shall stand."
+
+    An "But I must do it with the assistance of others, as my father had taught me."
+
+    An "Please, understand."
+
+    #--- Monologue 3
+
+    "Every word I let out was a lie.{w=[q]} It should be obvious.{w=[q]}
+    I only ever saw them get executed.{w=[q]} But it should be enough to rile up the hearts of people.{w=[q]}
+    Especially those who found their continued existence thanks to us."
+
+    "But still, it felt wrong to have lied to these people to garner sympathy."
+
+    "Even if that was what my mother taught me to do."
+
+    "Lies, lies.{w=[s]} Tiny little lies, expressed enough would be true.{w=[q]}
+    As truth itself is nothing more than confirmation bias,
+    whatever one believes is true, is true.{w=[q]}
+    Of course, such a thing doesn’t apply to things we have no control over."
+
+    "Like nature itself, or how we ought to be perceived."
+
+    "It had been 2 seconds since I finished my speech."
+
+    "Two-hundred and eighty-two eyes stared at me."
+
+    "Right into my soul."
+
+    "A pit has opened inside my stomach.{w=[q]}
+    It wanted to rip me apart for saying the things that I said.{w=[q]}
+    In the same vein, they would want to rip me apart for lying to them."
+
+    "But I just stood here.{w=[q]} Frozen."
+
+    "Waiting to be devoured."
+
+    "Then, bullets whizzed by."
+    
+    with vpunch
+    An "Eek!"
+
+    Rv1 "THERE SHE IS! GET HER!"
+    with vpunch
+
+    Vl1 "Duchess! Come down here now!"
+
+    An "Hey, what are you doing? Why are you pulling me down?!"
+
+    Vl1 "We’re going to keep you safe."
+
+    Vl2 "Please! Go to the cave! The saints will keep you safe."
+
+    An "But what about you?"
+    
+    Vl2 "So long as you’re safe, we will be too."
+
+    Vl2 "Please.{w=[q]} Run."
+
+    Rv1 "The villagers are fighting back!"
+
+    Rv2 "Fools!"
+
+    Rv2 "Hopeless fools…"
+
+    Rv1 "What do we do, sir?"
+
+    Rv2 "It doesn’t matter what we do.
+    Find the Duchess and gun down anyone that tries to pull you away."
+
+    Rv2 "We mustn't let her get to the cave."
+
+    jump chapter_two

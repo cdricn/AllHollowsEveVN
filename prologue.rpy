@@ -14,7 +14,7 @@ label prologue:
     #It seeps into the ground, like trees which nourish from blood.\n{w=[s]}
     #The cave has opened. It is the hollow’s eve."
 
-    show cave_entrance
+    show forest1_night
     with fade
 
     #running sfx
@@ -43,6 +43,7 @@ label prologue:
 
     An "Eek!"
 
+    with vpunch
     #gunshot sfx
 
     "The ground beneath me crumbled, as if I fell down a hole unseen to the naked eye.{w=[s]}
@@ -62,7 +63,8 @@ label prologue:
 
     Ex "Yes, sir!"
 
-    hide cave_entrance
+    $ renpy.choice_for_skipping()
+    hide forest1_night
     with fade
 
     "Why...{w=[s]} Why did this happen?{w=[s]}
