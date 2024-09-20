@@ -18,6 +18,7 @@ default s = float(.5) #short pause
 image forest1_night = im.Scale("ForestNight1.png", 1920, 1080)
 image house_night = im.Scale("HouseNight1.png", 1920, 1080)
 image village_night = im.Scale("VillageNight1.png", 1920, 1080)
+image cave_entrance = im.Scale("ForestCave.png", 1920, 1080)
 
 #screen voice_toggle:
 #    vbox:
@@ -29,4 +30,5 @@ image village_night = im.Scale("VillageNight1.png", 1920, 1080)
 
 
 label start:
+
     jump prologue

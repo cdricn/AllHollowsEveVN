@@ -8,6 +8,6 @@ A visual novel created using RenPy.
 (add links)
 
 ## Credits
-Writer - Leigh
-Developer - cdricn
+Writer - Leigh </br>
+Developer - cdricn </br>
 Art - Dump, cdricn
