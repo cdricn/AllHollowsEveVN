@@ -1,7 +1,8 @@
 
 label chapter_two:
     $ renpy.choice_for_skipping()
-    #--forest bg
+    show forest_night2
+    with fade
 
     An "Haah..."
 
@@ -157,7 +158,8 @@ label continue_cave_entrance:
     "And that is the fact that a part of this cave, or perhaps one of its path is artificial.{w=[q]}    
     A long, seemingly endless hallway lined with torches."
 
-    #--cavebg
+    show cave_hallway1
+    with fade
 
     An "..."
 
@@ -203,7 +205,8 @@ label continue_cave_entrance:
 
     Tr "Do you not have friends back home?"
 
-    #bg
+    show cave_hallway2
+    with fade
 
     An "Friends..."
 
@@ -275,15 +278,16 @@ label continue_cave_entrance:
 
     "Not in a room, but towards another cave."
 
-    #--churchbg
+    show palace_outside
+    with fade
 
-
-
+    "test"
+    return
 
 
 label fail_cave_entrance:
     #--run fx
-    show forest1_night
+    show forest_night1
     with fade
 
     "Of course I have a choice.{w=[q]} I always, always have a choice."
@@ -330,6 +334,7 @@ label fail_cave_entrance:
     "But it was too late."
 
     #--gunshot sfx
+    with vpunch
 
     "A shot rang out.{w=[q]} It disturbed the calm silence of the forest."
 
@@ -380,4 +385,17 @@ label fail_cave_entrance:
 
     An "Please..."
 
+    scene black
     #gunshot sfx
+    with vpunch
+
+    centered "You have been shot to death by the revolutionaries."
+
+    menu:
+        "Continue from last checkpoint?"
+
+        "Yes":
+            jump chapter_two
+
+        "No":
+            return

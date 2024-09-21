@@ -1,20 +1,20 @@
 
 label prologue:
-    #"They say, somewhere in the depths of the Evergreen Forests,\n{w=[s]}
-    #There exists a cave that opens only\n{w=[s]}
-    #when the royal family is at risk of being destroyed."
+    centered "They say, somewhere in the depths of the Evergreen Forests,\n{w=[s]}
+    There exists a cave that opens only\n{w=[s]}
+    when the royal family is at risk of being destroyed." 
 
-    #"No one knows what’s inside of it,\n{w=[s]}
-    #Not the current royal family, not the previous one.\n{w=[s]}
-    #As if it was destined to never open at all.\n{w=[s]}
-    #Symbolic of the Royal Family’s eternal rule."
+    centered "No one knows what’s inside of it,\n{w=[s]}
+    Not the current royal family, not the previous one.\n{w=[s]}
+    As if it was destined to never open at all.\n{w=[s]}
+    Symbolic of the Royal Family’s eternal rule."
 
-    #"But no rule lasts forever.\n{w=[s]}
-    #The heart of darkness that dwells within man,\n{w=[s]}
-    #It seeps into the ground, like trees which nourish from blood.\n{w=[s]}
-    #The cave has opened. It is the hollow’s eve."
+    centered "But no rule lasts forever.\n{w=[s]}
+    The heart of darkness that dwells within man,\n{w=[s]}
+    It seeps into the ground, like trees which nourish from blood.\n{w=[s]}
+    The cave has opened. It is the hollow’s eve."
 
-    show forest1_night
+    show forest_night1
     with fade
 
     #running sfx
@@ -64,7 +64,7 @@ label prologue:
     Ex "Yes, sir!"
 
     $ renpy.choice_for_skipping()
-    hide forest1_night
+    hide forest_night1
     with fade
 
     "Why...{w=[s]} Why did this happen?{w=[s]}

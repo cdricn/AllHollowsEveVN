@@ -15,10 +15,14 @@ default Ex = Character("???", voice_tag="enemy")
 default q = float(.2) #quick pause
 default s = float(.5) #short pause
 
-image forest1_night = im.Scale("ForestNight1.png", 1920, 1080)
+image forest_night1 = im.Scale("ForestNight1.png", 1920, 1080)
+image forest_night2 = im.Scale("ForestNight2.png", 1920, 1080)
 image house_night = im.Scale("HouseNight1.png", 1920, 1080)
 image village_night = im.Scale("VillageNight1.png", 1920, 1080)
 image cave_entrance = im.Scale("ForestCave.png", 1920, 1080)
+image cave_hallway1 = im.Scale("CaveInside.png", 1920, 1080)
+image cave_hallway2 = im.Scale("CaveHallway.png", 1920, 1080)
+image palace_outside = im.Scale("CavePalace.png", 1920, 1080)
 
 #screen voice_toggle:
 #    vbox:
