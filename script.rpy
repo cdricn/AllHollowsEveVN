@@ -34,5 +34,5 @@ image palace_outside = im.Scale("CavePalace.png", 1920, 1080)
 
 
 label start:
-
+    $ good_ed = 0
     jump prologue

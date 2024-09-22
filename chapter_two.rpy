@@ -278,11 +278,7 @@ label continue_cave_entrance:
 
     "Not in a room, but towards another cave."
 
-    show palace_outside
-    with fade
-
-    "test"
-    return
+    jump chapter_three
 
 
 label fail_cave_entrance:
