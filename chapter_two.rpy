@@ -130,12 +130,12 @@ label chapter_two:
         "But do I have a choice?"
 
         "Enter the cave":
-            jump continue_cave_entrance
+            jump cave_entrance_pass
 
         "Run away, far away from here":
-            jump fail_cave_entrance
+            jump cave_entrance_fail
 
-label continue_cave_entrance:
+label cave_entrance_pass:
     #--mono
     "Even if I did have a choice, it won’t matter."
 
@@ -303,7 +303,7 @@ label continue_cave_entrance:
     jump chapter_three
 
 
-label fail_cave_entrance:
+label cave_entrance_fail:
     #--run fx
     scene forest_night1
     with fade
