@@ -39,8 +39,12 @@ label prologue:
 
     "They are.{w=[s]} And I’m next.{w=[s]} I’m next.{w=[s]} I’m next."
 
+    show rev_L at left
+    with moveinleft
     Ex "There she is!{w=[s]} Get her!"
 
+    show ana at right
+    with moveinright
     An "Eek!"
 
     with vpunch
@@ -52,6 +56,10 @@ label prologue:
 
     #Leaves rustle sfx she fell down a hole
 
+    show ana at hide_R
+    with moveinleft
+    show rev_R at right
+    with moveinright
     Ex "Did you get her?"
 
     Ex "I think so, maybe you were just seeing things?"
@@ -64,7 +72,11 @@ label prologue:
     Ex "Yes, sir!"
 
     $ renpy.choice_for_skipping()
-    hide forest_night1
+    show rev_L at hide_L
+    with moveinright
+    show rev_R at hide_R
+    with moveinleft
+    scene black
     with fade
 
     "Why...{w=[s]} Why did this happen?{w=[s]}
@@ -88,7 +100,15 @@ label prologue:
 
     "Maybe I should’ve."
 
+    show alx2 at left_second
+    with moveinleft
+    show sis at left
+    with moveinleft
+    
     SoAx "..."
+
+    show ana at right
+    with moveinright
 
     An "Mother,{w=[s]} brother.{w=[s]}
     I’m so sorry.{w=[s]} I should’ve been there with you, right?"
@@ -130,5 +150,12 @@ label prologue:
     An "Alexei..."
 
     Ax "..."
+
+    show alx2 at hide_L
+    with moveinright
+    show sis at hide_L
+    with moveinright
+    show ana at hide_R
+    with moveinleft
 
     jump chapter_one

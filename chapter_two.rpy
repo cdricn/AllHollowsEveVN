@@ -1,8 +1,12 @@
 
 label chapter_two:
     $ renpy.choice_for_skipping()
-    show forest_night2
+    scene forest_night2
     with fade
+
+    ""
+    show ana at right
+    with moveinright
 
     An "Haah..."
 
@@ -28,6 +32,9 @@ label chapter_two:
     An "That voice..."
 
     An "Trina?"
+
+    show trina at left
+    with moveinleft
 
     Tr "Haah… I’m glad to see you’re safe.{w=[q]} But you do run fast."
 
@@ -63,6 +70,11 @@ label chapter_two:
     Tr "It doesn’t matter, duchess.{w=[q]} I’ll protect you!"
 
     An "Heh… thanks, Trina."
+
+    show trina at hide_L
+    with moveinright
+    show ana at hide_R
+    with moveinleft
 
     #--mono
 
@@ -158,8 +170,14 @@ label continue_cave_entrance:
     "And that is the fact that a part of this cave, or perhaps one of its path is artificial.{w=[q]}    
     A long, seemingly endless hallway lined with torches."
 
-    show cave_hallway1
+    scene cave_hallway1
     with fade
+
+    ""
+    show ana at right
+    with moveinright
+    show trina at left
+    with moveinleft
 
     An "..."
 
@@ -205,7 +223,11 @@ label continue_cave_entrance:
 
     Tr "Do you not have friends back home?"
 
+    hide trina
+    hide ana
     show cave_hallway2
+    show ana at right
+    show trina at left
     with fade
 
     An "Friends..."
@@ -283,7 +305,7 @@ label continue_cave_entrance:
 
 label fail_cave_entrance:
     #--run fx
-    show forest_night1
+    scene forest_night1
     with fade
 
     "Of course I have a choice.{w=[q]} I always, always have a choice."
@@ -293,6 +315,11 @@ label fail_cave_entrance:
     "It was better to receive that pain than to die in a random cave somewhere."
 
     "Whatever it was that I felt, it wasn’t good. This was the better choice."
+    
+    show ana at right
+    with moveinright
+    show trina at left
+    with moveinleft
 
     Tr "H-hey! Where are we going?!{w=[q]} The cave’s right there!"
 
@@ -331,11 +358,16 @@ label fail_cave_entrance:
 
     #--gunshot sfx
     with vpunch
+    show black
+
+    ""
 
     "A shot rang out.{w=[q]} It disturbed the calm silence of the forest."
 
     "And the girl beside me fell to the ground.{w=[q]} Consumed by it, face down.{w=[q]}
     I couldn’t even see her face anymore."
+
+    #show deadbg with fade
 
     An "Trina...?"
 

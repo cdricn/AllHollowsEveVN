@@ -167,6 +167,8 @@ label chapter_three_minus:
 
     An "Then it’s a promise."
 
+    "I smile at her, eager for the future.{w=[q]} Then,--"
+
     jump chapter_three_part2
 
 label chapter_three_plus:
@@ -178,8 +180,142 @@ label chapter_three_plus:
 
     Tr "Is that so, Duchess?{w=[q]} Do you sincerely hope that?"
 
+    An "As much as I enjoyed the comforts of home."
+
+    An "Being desperately put down like this feels terrible to the soul."
+
+    "I did see my parents be killed in cold blood after all. And maybe she did as well."
+
+    An "So what do you say?{w=[q]} Do you wanna stick together, even after this?"
+
+    Tr "Why not?"
+
+    Tr "If I’m a part of your plans, then who am I to refuse the wishes of a duchess."
+
+    Tr "And especially if that plan will let me see the western lands."
+
+    Tr "So, I suppose, I’ll stay with you for as long as you need me."
+
+    An "Thank you, Trina."
+
+    An "It’s a promise.{w=[q]} We’ll get through this together."
+
+    "I smiled at her, though uncertain about what would happen in the future,
+    I knew it would be alright so long as we have each other to run back to."
+
+    "And with that,--"
+
     jump chapter_three_part2
 
 label chapter_three_part2:
+    "--I pushed open the door, and entered the Cathedral."
+    #procession bg, black if no time
+    scene black
+    with fade
+    
+    "I remembered the first time I witnessed the Procession."
 
-    #test "GOOD ED SCORE [good_ed]"
+    "We were required to attend it, as is the procedure of the royal family.{w=[q]}
+    Sunlight pierced through the stained glass windows;
+    it bathed the entire cathedral in a myriad of colors."
+
+    "We were seated on a terrace, high above the commoners below.{w=[q]}
+    Yet from here, we could see just how much they changed the cathedral to prepare for the Procession."
+
+    "The aisle, which normally was the width of one man, was stretched out to fit four.{w=[q]}
+    All walking side by side."
+
+    "The commoners were all on the far side, terribly cramped, and crushing each other with every breath."
+    
+    "Mother asked me, “If you think you can, will you willingly change their plight?”"
+
+    "I was twelve then, I didn’t really understand what she was talking about.{w=[q]}
+    But even now, I still don’t understand her.{w=[q]}
+    So still, like back then, my answer is, “I don’t know.”"
+
+    "I wouldn’t say she was disappointed.{w=[q]} When I looked over to her,
+    she seemed to look a little content.{w=[q]} As if the answer I posed was the one that she expected."
+
+    "Then, the church bells rang, and like clockwork, white petals fell from numerous places above us.
+    They rained on the coming procession, and reflected the beauty of the colorful lights."
+
+    "It was solemn.{w=[q]} A terrible silence that predicated terrible things.{w=[q]}
+    First came the Patriarch, dressed in a purple so Tyrian not even father could wear such garb."
+
+    "He carried the staff of the holy Sun with him.{w=[q]} Gold, tall, and full of splendor."
+
+    "Then, behind him came the eight lesser priests.{w=[q]}
+    Those that were responsible for the regional lessons on scripture."
+
+    "They weren’t around much, but they were like Patriarchs of their own.
+    They held similar staves as the Patriarch, yet named after the planets."
+
+    "And further behind them, carried by the common folk that they selected by random, was the altar.{w=[q]}
+    A golden pool, yet unfilled. Upon its sides, the saints were engraved.{w=[q]}"
+
+    "Their figures, their faces, their achievements.{w=[q]}
+    As if it wasn’t enough that they were statues that looked down upon everyone from above."
+
+    "Furthermore, a cross was erected upon one end of it.
+    They wanted to suggest something with its design, that God is watching.{w=[q]}
+    Not only that,{w=[q]} he approved of this procession."
+
+    #black bg, don't add scene is already black
+
+    Ax "Of course, sister.{w=[q]} Why wouldn’t God approve?"
+
+    An "Because if He saw what we did with our freedom, then He wouldn’t approve."
+
+    Ax "Which part would He not approve of, dear sister?"
+
+    An "That we’re using Him as a scapegoat for our own misdeeds?"
+
+    An "Is this part of his plan when He got Himself killed for us?"
+
+    An "When He allowed us to have the freedom of existence?"
+
+    Ax "Sister, we still have the freedom of existence.{w=[q]}
+    He must’ve understood that such freedom also means we bear the responsibility of it."
+
+    Ax "This is freedom.{w=[q]} This is what we choose to do with it.{w=[q]}
+    We choose to ask for help from the saints, we choose to remain peaceful in our own lives."
+
+    Ax "Even if it meant trampling those who cannot afford such luxuries."
+
+    Ax "Do you not understand that?{w=[q]} Due to the circumstances of our birth,
+    we are far more free than any of these commoners could ever be."
+
+    Ax "We can leave anytime we want.{w=[q]} We can simply abandon our duties
+    and run away with so much money that we could live comfortably anywhere until we die."
+
+    Ax "But what did you choose to do with your own sense of free will?"
+
+    An "I..."
+
+    Ax "Threw it away reading books and looking at flowers.{w=[q]}
+    You enjoyed the comfort of your existence and now that it came to bite you, you’re regretting it?"
+
+    Ax "You wish to run away now?"
+
+    Ax "Is that what you were thinking when you looked me in the eyes as I was about to be shot?"
+
+    Ax "That you should run away?"
+
+    Ax "You should’ve been there with us."
+
+    Ax "No, you should’ve been there instead of me.{w=[q]} You should’ve been the only one there."
+
+    Ax "You were the most useless in the family after all."
+
+    Ax "Tell me, sister.{w=[q]} After the few short hours you’ve spent with that commoner,
+    will you now decide to change their plight?"
+
+    Ax "You’re the only one who can now, after all."
+
+    An "..."
+
+    An "I… I still don’t know."
+
+    Ax "Then, the cycle will continue."
+
+    jump chapter_four

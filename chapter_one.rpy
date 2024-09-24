@@ -1,11 +1,18 @@
 
 label chapter_one:
     $ renpy.choice_for_skipping()
-    show house_night
+    scene house_night
     with fade
     with vpunch
 
+    ""
+    show ana at right
+    with moveinright
+
     An "ALEXEI!"
+
+    show trina at left
+    with moveinleft
 
     Tr "Gah!"
 
@@ -60,20 +67,33 @@ label chapter_one:
 
     Tr "But since you’re well, they’re excited to see you!{w=[q]} Hup!"
 
+    show trina at hide_L
+    with moveinright
+
     An "Huh?{w=[q]} Hey, wait!"
 
     "She quickly bolted out of the house."
 
     An "Wait!"
 
+    show ana at hide_R
+    with moveinleft
+
     $ renpy.choice_for_skipping()
-    show village_night
+    scene village_night
     with fade
     # footsteps sfx
 
+    ""
+    show ana at right
+    with moveinright
+
     An "Hey!{w=[q]} At least tell me what that rite is.{w=[q]} Am I going to die here too?"
 
-    Tr "Huh?{w=[s]} Oh, no.{w=[q]} Please.{w=[q]}
+    show trina at left
+    with moveinleft
+
+    Tr "Huh?{w=[s]} Oh, no, please.{w=[q]}
     I didn’t mean it like that.{w=[q]} The rite is… well.{w=[q]} The rite!"
 
     An "And what is the rite?"
@@ -156,10 +176,18 @@ label chapter_one:
 
     "But why do I not really…{w=[s]} feel anything?"
 
+    show trina at hide_L
+    with moveinright
+    show vil_f at hide_L
+    show vil_m at left
+    with moveinleft
+
     Vl1 "Oh! Is that the duchess!?"
 
     Vl1 "The duchess! She’s awake!"
 
+    show vil_f at left_second
+    with moveinleft
     Vl2 "Oh! Duchess. It is an honor."
 
     Vl1 "It is an honor."
@@ -169,6 +197,11 @@ label chapter_one:
     An "You too, Trina?"
 
     Tr "..."
+
+    show vil_f at hide_L
+    with moveinright
+    show vil_m at hide_L
+    with moveinright
 
     #--- Monologue 2
 
@@ -188,6 +221,9 @@ label chapter_one:
     "It could be that the beating of my heart added weight to me."
 
     "They all stood up in front of the stage and stared, expectant of my words."
+
+    show ana at center
+    with moveinright
 
     An "U-uhm.{w=[q]} Good evening, everyone! As you may know, I am your Duchess Anastasia Konstantin."
 
@@ -271,14 +307,27 @@ label chapter_one:
     with vpunch
     An "Eek!"
 
+    show ana at right
+    with moveinleft
+    show rev_L at left
+    with moveinleft
+
     Rv1 "THERE SHE IS! GET HER!"
     with vpunch
+
+    show rev_L at hide_L
+    with moveinright
+    show vil_m at left
+    with moveinleft
 
     Vl1 "Duchess! Come down here now!"
 
     An "Hey, what are you doing? Why are you pulling me down?!"
 
     Vl1 "We’re going to keep you safe."
+
+    show vil_f at left_second
+    with moveinleft
 
     Vl2 "Please! Go to the cave! The saints will keep you safe."
 
@@ -288,7 +337,19 @@ label chapter_one:
 
     Vl2 "Please.{w=[q]} Run."
 
+    show ana at hide_R
+    with moveinleft
+    show vil_m at hide_L
+    with moveinright
+    show vil_f at hide_L
+    with moveinright
+    show rev_L at left
+    with moveinright
+
     Rv1 "The villagers are fighting back!"
+
+    show rev_R at right
+    with moveinright
 
     Rv2 "Fools!"
 
@@ -300,5 +361,10 @@ label chapter_one:
     Find the Duchess and gun down anyone that tries to pull you away."
 
     Rv2 "We mustn't let her get to the cave."
+
+    show rev_L at hide_L
+    with moveinright
+    show rev_R at hide_R
+    with moveinleft
 
     jump chapter_two
