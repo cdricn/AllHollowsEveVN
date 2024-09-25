@@ -1,17 +1,15 @@
 
 label chapter_one:
     $ renpy.choice_for_skipping()
-    scene house_night
-    with fade
+    show house_night
+    show ana at center
     with vpunch
-
-    ""
-    show ana at right
-    with moveinright
 
     An "ALEXEI!"
 
     show trina at left
+    with moveinleft
+    show ana at right
     with moveinleft
 
     Tr "Gah!"
@@ -76,8 +74,8 @@ label chapter_one:
 
     An "Wait!"
 
-    show ana at hide_R
-    with moveinleft
+    show ana at hide_L
+    with moveinright
 
     $ renpy.choice_for_skipping()
     scene village_night
@@ -94,7 +92,7 @@ label chapter_one:
     with moveinleft
 
     Tr "Huh?{w=[s]} Oh, no, please.{w=[q]}
-    I didn’t mean it like that.{w=[q]} The rite is… well.{w=[q]} The rite!"
+    I didn’t mean it like that.{w=[q]} The rite is…{w=[q]} well.{w=[q]} The rite!"
 
     An "And what is the rite?"
 
@@ -195,8 +193,6 @@ label chapter_one:
     An "H-hello!{w=[q]} Hey wait.{w=[q]} Why are you all kneeling?"
 
     An "You too, Trina?"
-
-    Tr "..."
 
     show vil_f at hide_L
     with moveinright
@@ -348,7 +344,7 @@ label chapter_one:
 
     Rv1 "The villagers are fighting back!"
 
-    show rev_R at right
+    show rev_R at right_flip
     with moveinright
 
     Rv2 "Fools!"

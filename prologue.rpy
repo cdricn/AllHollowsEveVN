@@ -15,6 +15,7 @@ label prologue:
     The cave has opened. It is the hollow’s eve."
 
     show forest_night1
+    show ana_dirty at center
     with fade
 
     #running sfx
@@ -38,13 +39,14 @@ label prologue:
     "..."
 
     "They are.{w=[s]} And I’m next.{w=[s]} I’m next.{w=[s]} I’m next."
-
+    
+    show rev_R at hide_L
     show rev_L at left
+    with moveinleft
+    show ana_dirty at right
     with moveinleft
     Ex "There she is!{w=[s]} Get her!"
 
-    show ana at right
-    with moveinright
     An "Eek!"
 
     with vpunch
@@ -56,10 +58,10 @@ label prologue:
 
     #Leaves rustle sfx she fell down a hole
 
-    show ana at hide_R
+    show ana_dirty at hide_Bottom
     with moveinleft
-    show rev_R at right
-    with moveinright
+    show rev_R at left_second
+    with moveinleft
     Ex "Did you get her?"
 
     Ex "I think so, maybe you were just seeing things?"
@@ -74,10 +76,13 @@ label prologue:
     $ renpy.choice_for_skipping()
     show rev_L at hide_L
     with moveinright
-    show rev_R at hide_R
-    with moveinleft
+    show rev_R at hide_L
+    with moveinright
     scene black
     with fade
+
+    ""
+    show ana_dirty at center
 
     "Why...{w=[s]} Why did this happen?{w=[s]}
     Am I really deserving of feeling such terror?{w=[s]}
@@ -100,15 +105,10 @@ label prologue:
 
     "Maybe I should’ve."
 
-    show alx2 at left_second
-    with moveinleft
-    show sis at left
-    with moveinleft
+    show sis at right_flip
+    show alx2 at left
     
     SoAx "..."
-
-    show ana at right
-    with moveinright
 
     An "Mother,{w=[s]} brother.{w=[s]}
     I’m so sorry.{w=[s]} I should’ve been there with you, right?"
@@ -151,11 +151,8 @@ label prologue:
 
     Ax "..."
 
-    show alx2 at hide_L
-    with moveinright
-    show sis at hide_L
-    with moveinright
-    show ana at hide_R
-    with moveinleft
+    hide alx2
+    hide sis
+    hide ana_dirty
 
     jump chapter_one

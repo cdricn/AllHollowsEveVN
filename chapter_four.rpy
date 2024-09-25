@@ -1,9 +1,12 @@
 
 label chapter_four:
     $ renpy.choice_for_skipping()
-    scene palace_hallway
-
-    ""
+    hide alx
+    hide ana
+    show palace_hallway
+    show ana at right
+    show trina at left
+    with vpunch
     
     An "!"
 
@@ -266,6 +269,7 @@ label chapter_four_part2:
             jump chapter_four_fail
 
 label chapter_four_fail:
+    hide black
     "As reluctant as I was to enter, seeing another person would at least ease up the tension in the place."
 
     "Trina and I carefully approached the door at the end of the stairs.{w=[q]}
@@ -292,6 +296,9 @@ label chapter_four_fail:
     "A total loss of sensation, to the point that I don’t feel it existing anymore,
     yet still, I couldn’t move from it."
 
+    show black
+    with vpunch
+
     An "Trina, help!"
 
     "She reached out for my hand and tried to pull me away to no avail."
@@ -312,7 +319,7 @@ label chapter_four_fail:
 
     "Her hands slipping from mine, as I fell into the depths below."
 
-    show black
+    centered "You have been shot to death by the revolutionaries."
 
     $ renpy.choice_for_skipping()
     menu:

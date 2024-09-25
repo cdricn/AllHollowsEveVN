@@ -69,14 +69,14 @@ label chapter_two:
 
     Tr "It doesn’t matter, duchess.{w=[q]} I’ll protect you!"
 
-    An "Heh… thanks, Trina."
-
     show trina at hide_L
     with moveinright
-    show ana at hide_R
-    with moveinleft
+    An "Heh… thanks, Trina."
 
     #--mono
+
+    show ana at center
+    with moveinright
 
     "The moon rose high into the sky by the time we saw even a glimpse of the cave."
 
@@ -98,9 +98,17 @@ label chapter_two:
     he would’ve been a lot more respected as the true heir of Father."
 
     "Though, before all those musings took hold of my psyche even further the cave presented itself to us."
+    
+    show ana at hide_L
+    with moveinright
 
-    show cave_entrance
+    scene cave_entrance
     with fade
+    ""
+    show trina at left
+    with moveinleft
+    show ana at right
+    with moveinright
 
     "Between the trees, like a gaping maw by the mountainside.{w=[q]} There it was, a river flowed out of it,
     pristine delicate water clashed upon rocks eroded for thousands of years."
@@ -169,6 +177,11 @@ label cave_entrance_pass:
 
     "And that is the fact that a part of this cave, or perhaps one of its path is artificial.{w=[q]}    
     A long, seemingly endless hallway lined with torches."
+
+    show ana at hide_R
+    with moveinleft
+    show trina at hide_L
+    with moveinright
 
     scene cave_hallway1
     with fade
@@ -305,6 +318,10 @@ label cave_entrance_pass:
 
 label cave_entrance_fail:
     #--run fx
+    show ana at hide_L
+    with moveinright
+    show trina at hide_L
+    with moveinright
     scene forest_night1
     with fade
 

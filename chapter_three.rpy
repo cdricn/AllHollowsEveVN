@@ -1,7 +1,11 @@
 
 label chapter_three:
     $ renpy.choice_for_skipping()
+    hide trina
+    hide ana
     show palace_outside
+    show ana at right
+    show trina at left
     with fade
 
     An "No..."
@@ -210,6 +214,8 @@ label chapter_three_plus:
 label chapter_three_part2:
     "--I pushed open the door, and entered the Cathedral."
     #procession bg, black if no time
+    hide ana
+    hide trina
     scene black
     with fade
     
@@ -262,7 +268,13 @@ label chapter_three_part2:
 
     #black bg, don't add scene is already black
 
+    show alx at left
+    with moveinleft
+
     Ax "Of course, sister.{w=[q]} Why wouldn’t God approve?"
+
+    show ana at right
+    with moveinright
 
     An "Because if He saw what we did with our freedom, then He wouldn’t approve."
 

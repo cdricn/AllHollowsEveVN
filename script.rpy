@@ -66,6 +66,8 @@ transform hide_L:
     xalign -0.5 yalign 0.5
 transform hide_R:
     xalign 1.5 yalign 0.5
+transform hide_Bottom:
+    xalign 1.5 yalign 1.3
 
 
 label start:
