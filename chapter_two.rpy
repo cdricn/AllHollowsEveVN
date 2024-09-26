@@ -1,5 +1,6 @@
 
 label chapter_two:
+    play music "Sample1.ogg" loop
     $ renpy.choice_for_skipping()
     scene forest_night2
     with fade
@@ -69,6 +70,7 @@ label chapter_two:
 
     Tr "It doesn’t matter, duchess.{w=[q]} I’ll protect you!"
 
+    play sound "Walk.ogg"
     show trina at hide_L
     with moveinright
     An "Heh… thanks, Trina."
@@ -183,6 +185,7 @@ label cave_entrance_pass:
     show trina at hide_L
     with moveinright
 
+    play sound "Walk.ogg"
     scene cave_hallway1
     with fade
 
@@ -238,6 +241,7 @@ label cave_entrance_pass:
 
     hide trina
     hide ana
+    play sound "Walk.ogg"
     show cave_hallway2
     show ana at right
     show trina at left
@@ -373,7 +377,7 @@ label cave_entrance_fail:
 
     "But it was too late."
 
-    #--gunshot sfx
+    play sound "Gunshot.ogg"
     with vpunch
     show black
 
@@ -418,8 +422,6 @@ label cave_entrance_fail:
 
     "More than any other noble."
 
-    #run sfx
-
     "The heavy steps of revolutionaries come to approach me, their guns drawn."
 
     "In their eyes were a raging fire that never once quelled."
@@ -431,7 +433,7 @@ label cave_entrance_fail:
     An "Please..."
 
     scene black
-    #gunshot sfx
+    play sound "Gunshot.ogg"
     with vpunch
 
     centered "You have been shot to death by the revolutionaries."

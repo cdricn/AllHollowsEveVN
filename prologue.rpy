@@ -1,5 +1,6 @@
 
 label prologue:
+    play music "Sample1.ogg" loop
     centered "They say, somewhere in the depths of the Evergreen Forests,\n{w=[s]}
     There exists a cave that opens only\n{w=[s]}
     when the royal family is at risk of being destroyed." 
@@ -15,10 +16,9 @@ label prologue:
     The cave has opened. It is the hollow’s eve."
 
     show forest_night1
-    show ana_dirty at center
     with fade
-
-    #running sfx
+    show ana_dirty at center
+    ""
 
     "They killed them."
 
@@ -45,7 +45,7 @@ label prologue:
     with moveinleft
     show ana_dirty at right
     with moveinleft
-    Ex "There she is!{w=[s]} Get her!"
+    Rv1 "There she is!{w=[s]} Get her!"
 
     An "Eek!"
 
@@ -62,16 +62,18 @@ label prologue:
     with moveinleft
     show rev_R at left_second
     with moveinleft
-    Ex "Did you get her?"
+    Rv2 "Did you get her?"
 
-    Ex "I think so, maybe you were just seeing things?"
+    Rv1 "I think so..."
+    
+    Rv2 "Maybe you were just seeing things?"
 
-    Ex "No, I’m damn sure I saw her."
+    Rv1 "No, I’m damn sure I saw her."
 
-    Ex "Right, can’t trust you for calling out now, can’t I?{w=[s]} Come on.{w=[s]}
+    Rv2 "Right, can’t trust you for calling out now, can’t I?{w=[s]} Come on.{w=[s]}
     Keep searching, we need to find them before sunrise."
 
-    Ex "Yes, sir!"
+    Rv1 "Yes, sir!"
 
     $ renpy.choice_for_skipping()
     show rev_L at hide_L

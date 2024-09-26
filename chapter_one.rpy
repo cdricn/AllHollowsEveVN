@@ -1,9 +1,12 @@
 
 label chapter_one:
     $ renpy.choice_for_skipping()
+    play music "Sample1.ogg" loop
     show house_night
     show ana at center
+    play sound "Hit.ogg"
     with vpunch
+
 
     An "ALEXEI!"
 
@@ -67,10 +70,12 @@ label chapter_one:
 
     show trina at hide_L
     with moveinright
+    play sound "Walk.ogg"
 
     An "Huh?{w=[q]} Hey, wait!"
 
     "She quickly bolted out of the house."
+    play sound "Hit.ogg"
 
     An "Wait!"
 
@@ -80,7 +85,6 @@ label chapter_one:
     $ renpy.choice_for_skipping()
     scene village_night
     with fade
-    # footsteps sfx
 
     ""
     show ana at right
@@ -300,7 +304,10 @@ label chapter_one:
 
     "Then, bullets whizzed by."
     
+    play sound "Gunshot3.ogg"
     with vpunch
+    ""
+
     An "Eek!"
 
     show ana at right
@@ -309,6 +316,7 @@ label chapter_one:
     with moveinleft
 
     Rv1 "THERE SHE IS! GET HER!"
+    play sound "Gunshot2.ogg"
     with vpunch
 
     show rev_L at hide_L

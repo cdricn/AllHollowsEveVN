@@ -1,6 +1,8 @@
 
 label chapter_three:
     $ renpy.choice_for_skipping()
+    play music "Sample1.ogg" loop
+    play sound "Walk.ogg"
     hide trina
     hide ana
     show palace_outside

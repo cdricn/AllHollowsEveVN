@@ -1,6 +1,8 @@
 
 label chapter_four:
     $ renpy.choice_for_skipping()
+    play music "Sample1.ogg" loop
+    play sound "Hit.ogg"
     hide alx
     hide ana
     show palace_hallway
@@ -37,7 +39,6 @@ label chapter_four:
 
     An "A--"
 
-    with vpunch #should i add?
     Tr "Ana, calm down."
 
     Tr "I don’t know what happened either, but the moment we entered the Cathedral we just woke up here."
@@ -76,7 +77,7 @@ label chapter_four:
 
     Tr "And hopefully not that way because that’s where I just ran away from that weird darkness."
 
-    #screen wipe but keep bg (?) fade?
+    play sound "Walk.ogg"
     with fade
 
     An "Hm, that’s weird."
@@ -104,15 +105,12 @@ label chapter_four:
 
     Tr "Why not open that door then?"
 
-    show ana at right
-    show trina at left
-
     "Beside me was a door we had not yet opened.{w=[q]} There was also another on the far end of the hallway,
     but seeing as this was closest, I went ahead and opened it."
-
+    
+    play sound "Walk.ogg"
     hide ana
     hide trina
-
     show palace_baseclosed
     show ana at right
     show trina at left
@@ -234,6 +232,7 @@ label remember:
     jump chapter_four_part2
 
 label chapter_four_part2:
+    $ renpy.choice_for_skipping()
     An "In any case, we can’t go down there right now.{w=[q]} So might as well go somewhere else instead."
 
     An "Like that door at the end."
@@ -296,6 +295,7 @@ label chapter_four_fail:
     "A total loss of sensation, to the point that I don’t feel it existing anymore,
     yet still, I couldn’t move from it."
 
+    play sound "Hit.ogg"
     show black
     with vpunch
 
@@ -304,6 +304,8 @@ label chapter_four_fail:
     "She reached out for my hand and tried to pull me away to no avail."
 
     "The darkness was overwhelming.{w=[q]} It sought to engulf me whole."
+
+    play sound "Breathing.ogg"
 
     "It went up from my legs,{w=[q]} to my thighs,{w=[q]} to everywhere.{w=[q]} Until it reached my neck."
 
@@ -319,7 +321,7 @@ label chapter_four_fail:
 
     "Her hands slipping from mine, as I fell into the depths below."
 
-    centered "You have been shot to death by the revolutionaries."
+    centered "You have been swallowed by the darkness."
 
     $ renpy.choice_for_skipping()
     menu:
@@ -346,11 +348,117 @@ label chapter_four_pass:
     jump chapter_four_part3
 
 label chapter_four_part3:
-    #painting room bg
+    $ renpy.choice_for_skipping()
+    play sound "Walk.ogg"
+    hide trina
+    hide ana
+    show palace_artroom
+    show ana at right
+    show trina at left
+    with fade
 
     "Inside was a long hallway, dimly lit save for a few torches and
     the window at the far end where an unknown light seemed to emerge from beyond.{w=[q]}
     It imitated the moon, yet was significantly dimmer."
 
-    $ renpy.choice_for_skipping()
-    ""
+    "At the far end of the hallway was a portrait.{w=[q]} A family portrait."
+
+    "I approached it, careful with each step.{w=[q]} I could hear Trina trailing behind me."
+    
+    "Her breath was sharp.{w=[q]} Like daggers that gasped and clutched my back."
+
+    "There was something about this room that made her so terrified that she would
+    rather grab hold onto my sleeves rather than simply follow idly behind."
+
+    "As if she saw something that I couldn’t."
+
+    "Then there it was, at the end of the hallway.{w=[q]} I saw the family portrait so vividly,
+    despite the minimal amount of light around it."
+
+    show palace_painting
+    with fade
+
+    "It was our family portrait."
+
+    An "No..."
+
+    "Trina held tightly now.{w=[q]} As if she was pulling me back."
+
+    An "Trina, what are you doing?"
+
+    Tr "Ana, let’s get out of here."
+
+    An "No, don’t you see?!{w=[q]} Why is my family painting here?"
+
+    An "That’s me, right there!"
+
+    An "How did it get down here after so long?"
+
+    An "Tell me!"
+
+    "I turned around and let my voice echo through the walls.{w=[q]}
+    There, numerous torches light up across the hallway, bathing the entire room in a warm orange glow."
+
+    "I could see it all now, all hung up on the wall."
+
+    "Family portraits."
+
+    "The Cronian Dynasty, the Echidnon Dynasty, the Lagrange…{w=[q]} they’re all here."
+
+    "I stepped towards each and every portrait, analyzing any inconsistencies.{w=[q]}
+    But there were none, save for one thing."
+
+    "I would say it’s an inconsistency but it’s always a constant.{w=[q]} A consistent inconsistency."
+
+    An "No..."
+
+    "And it was a terrible one."
+
+    An "What…{w=[q]} what the…"
+
+    "Every portrait, save for the Konstantin Dynasty’s"
+
+    An "Where are the youngest daughters?"
+
+    Tr "Huh?"
+
+    An "There!"
+
+    "I point at the empty seats in every other portrait."
+
+    An "The youngest daughter is supposed to be seated there!{w=[q]} But why!?{w=[q]} Where are they?!"
+
+    "Nothing,{w=[q]} nothing,{w=[q]} nothing."
+
+    "All that’s left in those portraits were an empty seat and the implication that someone once seated there."
+
+    An "I don’t understand…{w=[q]} Why?!"
+
+    Tr "Ana, please.{w=[q]} Calm down.{w=[q]} We should leave this room."
+
+    An "No!{w=[q]} I…"
+
+    Tr "No!{w=[q]} Let’s go! Now!"
+
+    "I looked back at my family portrait and saw it getting engulfed in darkness.{w=[q]}
+    The false light of the moon had disappeared."
+
+    "It was approaching."
+
+    "And yet I couldn’t move.{w=[q]} As if my legs locked in place, or rather frozen in place.{w=[q]}
+    It was cold, after all."
+
+    "I could feel Trina tugging on my sleeve, trying to pull me out but to no avail."
+
+    An "T-trina.{w=[q]} Please."
+
+    Tr " I got you!"
+
+    "She held on to my waists and pulled me away.{w=[q]} Nothing restricted my legs,
+    so it seemed she just carried me away."
+
+    "All the way out of the hallway."
+    
+    "I watched the paintings slowly become consumed by the darkness, until they were all no more."
+
+    jump chapter_five
