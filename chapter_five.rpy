@@ -1,6 +1,6 @@
 label chapter_five:
     $ renpy.choice_for_skipping()
-    play music "Sample1.ogg" loop
+    play music "Sample2.ogg" loop
     hide palace_artroom
     hide palace_painting
     hide trina
@@ -456,14 +456,16 @@ label chapter_five_tr:
 
     "Thus, I continued to clean."
 
+    hide trina
     scene black
     with fade
-
+    stop music
     centered "End."
 
     return
 
 label chapter_five_ana:
+    stop music
     An "Trina..."
 
     An "I’m sorry."
@@ -476,6 +478,7 @@ label chapter_five_ana:
 
     "Despite all the aching feet, all the swollen muscles, all the chronic pain around my body."
 
+    play music "Sample4.ogg" volume 0.7 fadein 2.0
     "The chill of the palace."
 
     "To push her down the pool felt painful."
@@ -559,10 +562,183 @@ label chapter_five_ana:
 
     show black
     play sound "Crash.ogg"
+    stop music
     centered "The end."
 
     return
 
 label chapter_five_good:
-    ""
+    An "I’m breaking this cycle."
 
+    Ax "What!?"
+
+    Ax "Do you not understand?!"
+
+    Ax "Do I have to spell it out for you?"
+
+    Ax "No, Alexei. I get it."
+
+    An "But I’m sorry."
+
+    An "I think I’m starting to understand things far more than anyone in my place before ever had."
+
+    An "They suffer because of our existence.
+    And in turn, one of us has to suffer far more than anyone ever could."
+
+    An "“Damnatio Memoriae”, to be forgotten in history, as if you never existed in the first place."
+
+    An "I am too selfish to want that for myself."
+
+    An "And at the same time…"
+
+    "My hand held Trina’s, and my eyes fell towards hers.
+    She looked confused, still. After all, she can’t hear Alexei."
+
+    "For all she knows I’m mindlessly monologuing."
+
+    Tr "What’s… what’s going on?"
+
+    Tr "Why did you…"
+
+    An "Don’t worry about it."
+
+    An "I’m not going to accept a world where you’re forgotten as well."
+
+    Tr "Thank you… but…"
+
+    An "Listen to me, Trina."
+
+    An "The nobility sometimes… no. They always want to kill you."
+
+    "Trina scoffed."
+
+    Tr "I knew that much."
+
+    An "No, this is worse. They think they don’t.
+    They think what they’re doing is for the greater good,
+    that them partying in their lofty mansions. In their fancy suites…"
+
+    An "All of that is for the good of everyone."
+
+    An "Their delusions have rooted themselves so deep that they believe it to be the truth."
+
+    An "And this altar, this rite, this is the source of their truth."
+
+    An "You said we’re trapped by the circumstances of our birth, right?"
+
+    An "You will always be an impoverished peasant, I will always be a terrible noble."
+
+    Tr "You didn’t have to say it like that."
+
+    Tr "But I suppose. Where are you going with this?"
+
+    An "We don’t have to exist for them, we can exist for us. Not for others, not for anyone."
+
+    An "It might not be the best solution but…"
+
+    An "I think that’s the best we’ll ever have."
+
+    Tr "Is that so…"
+
+    Tr "Are you sure you’re alright with that decision?"
+
+    Tr "I still don’t know what’s going on but I can understand glimpses of it."
+
+    An "Ana, you don’t have to choose for me."
+
+    An "I’m choosing for myself."
+
+    An "Do you not wish for it too? To live as yourself? To not be forgotten?"
+
+    Tr "I wish for it, but will I gain such a wish?"
+
+    Tr "Who am I to receive such a wish?"
+
+    An "You are Trina Yagnenok. But that is not your full name, is it?"
+
+    Tr "It’s… Katherine Elizabeth Yagnenok. My mother picked it for me, 
+    she loved how it sounded, and if I’m being honest, so do I."
+
+    Tr "But it’s been long since she died."
+
+    Tr "All she ever gave me was my ability to read, and this name."
+
+    An "Then… that name will be remembered. And so will your mother, and so will everyone."
+
+    An "We’ll be okay."
+
+    Ax "This is your decision, then. For no one to be forgotten?"
+
+    Ax "To let time pass on the eternal empire?"
+
+    Ax "To let it crumble like everything else?"
+
+    An "We’ve been dancing for far too long. Our legs have gone numb, it’s time for us to take a break, right?"
+
+    An "Let’s go, Alexei."
+
+    Ax "..."
+
+    Ax "My dear sister."
+
+    Ax "I will never understand you."
+
+    An "I will never understand you, and mother, and father, and my sisters."
+
+    An "I shouldn’t have been born here."
+
+    Ax "At least you made me feel like a child."
+
+    Ax "Thank you."
+
+    Ax "And goodbye. Don’t forget about me."
+
+    An "I won’t."
+
+    stop music
+    hide alx2
+    show palace_ballroom_gd
+    with fade
+
+    "Alexei’s essence slowly faded out of existence.
+    He took with him the splendor that pervaded the ballroom, as the lights slowly went out,
+    and the dancers stopped in their tracks."
+
+    "It was dark now, and so unbelievably cold."
+
+    Tr "So what’s your plan, duchess?"
+
+    "The golden pool’s liquid seemed less like blood and more like water. Purified, clear."
+
+    An "Shall we take a dive?"
+
+    Tr "Heh. Even after saying all of that, at the end of it, we’re just going to die still, huh?"
+
+    An "At the very least, it’s on our own terms."
+
+    An "That’s more than anyone else could have."
+
+    Tr "I suppose so. Shall we?"
+
+    An "We shall."
+
+    hide black
+    show black
+    with fade
+
+    "In the coldness, we embraced."
+
+    "And fell to the waters below."
+
+    "It was warm, and the liquid that flowed into our lungs did not burn."
+
+    "Was it because we breathed into each other, ‘til our consciousness faded?"
+
+    "The light of the moon pierced through the surface."
+
+    "It lit up the abyss below us, as we faded into the darkness."
+
+    stop music
+    centered "End."
+
+    return

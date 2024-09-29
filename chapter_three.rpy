@@ -1,7 +1,7 @@
 
 label chapter_three:
     $ renpy.choice_for_skipping()
-    play music "Sample1.ogg" loop
+    play music "Sample2.ogg" loop
     play sound "Walk.ogg"
     hide trina
     hide ana
@@ -332,4 +332,5 @@ label chapter_three_part2:
 
     Ax "Then, the cycle will continue."
 
+    stop music
     jump chapter_four

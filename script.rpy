@@ -18,6 +18,8 @@ default q = float(.2) #quick pause
 default s = float(.5) #short pause
 
 # Backgrounds
+# Update: Upload 512 base images instead, then scale to nearest neighbor using renpy.
+# Scaling from 512 is not in near neighbor, maybe additional argument? Search more why
 image forest_night1 = im.Scale("ForestNight1.png", 1920, 1080)
 image forest_night2 = im.Scale("ForestNight2.png", 1920, 1080)
 image house_night = im.Scale("HouseNight1.png", 1920, 1080)
@@ -35,6 +37,8 @@ image palace_ballroom = im.Scale("PalaceBallroom2.png", 1920, 1080)
 image palace_ballroom_blood = im.Scale("PalaceBallroom_Blood2.png", 1920, 1080)
 image palace_ballroom_trina = im.Scale("PalaceBallroom_Trina2.png", 1920, 1080)
 image palace_ballroom_ana = im.Scale("PalaceBallroom_Ana2.png", 1920, 1080)
+image palace_ballroom_gd = "PalaceBallroom_Tr.png"
+image palace_ballroom_quiet = "PalaceBallroom_Quiet.png"
 
 # Characters
 image ana = "char_ana.png" #always right

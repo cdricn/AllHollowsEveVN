@@ -317,6 +317,7 @@ label cave_entrance_pass:
 
     "Not in a room, but towards another cave."
 
+    stop music
     jump chapter_three
 
 

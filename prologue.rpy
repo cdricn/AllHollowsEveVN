@@ -156,5 +156,6 @@ label prologue:
     hide alx2
     hide sis
     hide ana_dirty
-
+    stop music
+    
     jump chapter_one

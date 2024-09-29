@@ -1,7 +1,6 @@
 
 label chapter_one:
     $ renpy.choice_for_skipping()
-    play music "Sample1.ogg" loop
     show house_night
     show ana at center
     play sound "Hit.ogg"
@@ -310,6 +309,7 @@ label chapter_one:
 
     An "Eek!"
 
+    play music "Sample2.ogg" loop
     show ana at right
     with moveinleft
     show rev_L at left
@@ -371,4 +371,5 @@ label chapter_one:
     show rev_R at hide_R
     with moveinleft
 
+    stop music
     jump chapter_two

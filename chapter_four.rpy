@@ -1,7 +1,7 @@
 
 label chapter_four:
     $ renpy.choice_for_skipping()
-    play music "Sample1.ogg" loop
+    play music "Sample2.ogg" loop
     play sound "Hit.ogg"
     hide alx
     hide ana
@@ -461,4 +461,5 @@ label chapter_four_part3:
     
     "I watched the paintings slowly become consumed by the darkness, until they were all no more."
 
+    stop music
     jump chapter_five
