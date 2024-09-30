@@ -3,11 +3,12 @@ label chapter_five:
     play music "Sample2.ogg" loop
     hide palace_artroom
     hide palace_painting
-    hide trina
+    hide trina_w
     hide ana
+    hide ana_w
     show palace_baseopened
-    show trina at left
-    show ana at right
+    show trina_w at left
+    show ana_w at right
     with fade
 
     An "T-thank you, Trina.{w=[q]} I’m sorry."
@@ -66,6 +67,9 @@ label chapter_five_tell:
 
     "Despite the kindness of her words, the idea overwhelmed me."
 
+    show ana_s at right
+    hide ana_w
+
     An "Was I…{w=[q]} to be sacrificed?{w=[q]} Was that the point of me being here?{w=[q]}
     Was that the point of my existence?"
 
@@ -76,10 +80,16 @@ label chapter_five_tell:
     Tr "Or be stabbed to let you escape."
 
     Tr "I promised to protect you, duchess.{w=[q]} That will be upheld."
+    
+    show ana_w at right
+    hide ana_s
 
     An "But why?"
 
     An "We just met.{w=[q]} What’s the point?{w=[q]} Couldn’t you run away instead?"
+
+    show trina at left
+    hide trina_w
 
     Tr "I could.{w=[q]} But if I ran away, where would I go?{w=[q]}
     I take one step out of the cave, and I’ll get shot."
@@ -126,6 +136,9 @@ label chapter_five_quiet:
 
     An "I’m sorry."
     
+    show trina at left
+    hide trina_w
+
     Tr "It’s alright."
 
     Tr "Whatever it is, I’ll wait until you’re well enough to tell me."
@@ -137,6 +150,9 @@ label chapter_five_quiet:
 label chapter_five_part2:
 
     "We went around the room, and noticed that the door to the basement was now opened."
+
+    show trina_w at left
+    hide trina
 
     "A terrible darkness seeped out of it."
 
@@ -155,11 +171,11 @@ label chapter_five_part2:
     "We approached the basement door, and entered it."
 
     play sound "Walk.ogg"
-    hide trina
-    hide ana
+    hide trina_w
+    hide ana_w
     show palace_ballroom
-    show trina at left
-    show ana at right
+    show trina_w at left
+    show ana_w at right
     with fade
 
     "Inside, a space that was impossible to exist.{w=[q]} But from all that we’ve seen, it hardly even matters."
@@ -180,7 +196,7 @@ label chapter_five_part2:
 
     Ax "Do you understand?"
 
-    show trina at right_flip2
+    show trina_w at right_flip2
     with moveinleft
 
     An "Alexei…"
@@ -212,6 +228,9 @@ label chapter_five_part2:
     "Alexei looked at me with pity behind that unreadable face.{w=[q]} But I could hear it in the silence he let out."
 
     Ax "No…{w=[q]} she is."
+
+    show ana_s at right
+    hide ana_w
 
     Ax "She was always supposed to be the sacrificial lamb."
 
@@ -282,6 +301,10 @@ label chapter_five_part2:
             jump chapter_five_good
 
 label chapter_five_tr:
+
+    show ana_w at right
+    hide ana_s 
+
     An "Trina.{w=[q]} Push me down."
 
     Ax "You never changed.{w=[q]} No, this empire will never change."
@@ -290,7 +313,7 @@ label chapter_five_tr:
 
     hide alx2
     with fade
-    show trina at left_flip
+    show trina_w at left_flip
     with moveinright
 
     Tr "Ana, what are you talking about?{w=[q]} No way I’m pushing you down there."
@@ -315,9 +338,18 @@ label chapter_five_tr:
 
     Tr "Why would you think I would believe such things coming from you?"
 
+    show trina_s at left
+    hide trina_w
+
     Tr "You’re not like the others, right?{w=[q]} You were…"
 
+    show ana at right
+    hide ana_w
+
     An "Trina.{w=[q]} This is an order from your duchess."
+
+    show ana_h at right
+    hide ana
 
     An "This is for you."
 
@@ -340,6 +372,9 @@ label chapter_five_tr:
     And the more I urged her, the more she refused to do so."
 
     Tr "Don’t…{w=[q]} stop this.{w=[q]} We can get out of here, we can find another way."
+
+    show ana at right
+    hide ana_h
 
     An "There is no other way."
 
@@ -396,6 +431,7 @@ label chapter_five_tr:
     with fade
     #palace bg but more ppl
 
+    $ renpy.choice_for_skipping()
     "My name is Trina Yagnenok.{w=[q]} Three days ago,
     I woke up in this palace without any idea of what happened the night before
     Yet it felt as though I had lived here my whole life."
@@ -432,6 +468,9 @@ label chapter_five_tr:
     Inside this place was the family portraits of the previous dynasties.{w=[q]}
     The tsars that had lived, and their family."
 
+    show trina_w at left
+    hide trina
+
     "Weirdly, despite having never gone here before, it felt too familiar."
 
     "No, it felt like it was wrong to be here."
@@ -446,6 +485,9 @@ label chapter_five_tr:
 
     "The empty seat was visible from anywhere, so vivid.{w=[q]} So obvious."
 
+    show trina_s at left
+    hide trina_w
+
     "I feel my heart ache everytime I see it."
 
     "As if there was someone once there, someone dear."
@@ -456,12 +498,12 @@ label chapter_five_tr:
 
     "Thus, I continued to clean."
 
-    hide trina
+    hide trina_s
     scene black
     with fade
     stop music
+    $ renpy.choice_for_skipping()
     centered "End."
-
     return
 
 label chapter_five_ana:
@@ -471,7 +513,7 @@ label chapter_five_ana:
     An "I’m sorry."
 
     play sound "Hit.ogg"
-    hide trina
+    hide trina_w
     with vpunch
 
     "It was a swift motion, yet one of the most difficult that I’ve ever done."
@@ -544,6 +586,14 @@ label chapter_five_ana:
 
     Ax "No! What’s going on! This is--"
 
+    hide black
+    show black
+    stop music
+    play sound "Crash.ogg"
+    with vpunch
+
+    ""
+
     "I fell down to my knees and felt the hot oily blood boil through my clothes, through my skin."
 
     "I wept."
@@ -560,29 +610,34 @@ label chapter_five_ana:
 
     "A better person for you."
 
-    show black
-    play sound "Crash.ogg"
-    stop music
+    $ renpy.choice_for_skipping()
     centered "The end."
 
     return
 
 label chapter_five_good:
+
+    show ana_w at right
+    hide ana_s
+
     An "I’m breaking this cycle."
 
-    Ax "What!?"
+    Ax "What!?" with vpunch
 
     Ax "Do you not understand?!"
 
     Ax "Do I have to spell it out for you?"
 
-    Ax "No, Alexei. I get it."
+    show ana at right
+    hide ana_w
+
+    An "No, Alexei.{w=[q]} I get it."
 
     An "But I’m sorry."
 
     An "I think I’m starting to understand things far more than anyone in my place before ever had."
 
-    An "They suffer because of our existence.
+    An "They suffer because of our existence.{w=[q]}
     And in turn, one of us has to suffer far more than anyone ever could."
 
     An "“Damnatio Memoriae”, to be forgotten in history, as if you never existed in the first place."
@@ -591,12 +646,12 @@ label chapter_five_good:
 
     An "And at the same time…"
 
-    "My hand held Trina’s, and my eyes fell towards hers.
-    She looked confused, still. After all, she can’t hear Alexei."
+    "My hand held Trina’s, and my eyes fell towards hers.{w=[q]}
+    She looked confused, still.{w=[q]} After all, she can’t hear Alexei."
 
     "For all she knows I’m mindlessly monologuing."
 
-    Tr "What’s… what’s going on?"
+    Tr "What’s…{w=[q]} what’s going on?"
 
     Tr "Why did you…"
 
@@ -604,17 +659,17 @@ label chapter_five_good:
 
     An "I’m not going to accept a world where you’re forgotten as well."
 
-    Tr "Thank you… but…"
+    Tr "Thank you…{w=[q]} but…"
 
     An "Listen to me, Trina."
 
-    An "The nobility sometimes… no. They always want to kill you."
+    An "The nobility sometimes…{w=[q]} no.{w=[q]} They always want to kill you."
 
     "Trina scoffed."
 
     Tr "I knew that much."
 
-    An "No, this is worse. They think they don’t.
+    An "No, this is worse.{w=[q]} They think they don’t.{w=[q]}
     They think what they’re doing is for the greater good,
     that them partying in their lofty mansions. In their fancy suites…"
 
@@ -630,9 +685,9 @@ label chapter_five_good:
 
     Tr "You didn’t have to say it like that."
 
-    Tr "But I suppose. Where are you going with this?"
+    Tr "But I suppose.{w=[q]} Where are you going with this?"
 
-    An "We don’t have to exist for them, we can exist for us. Not for others, not for anyone."
+    An "We don’t have to exist for them, we can exist for us.{w=[q]} Not for others, not for anyone."
 
     An "It might not be the best solution but…"
 
@@ -644,36 +699,39 @@ label chapter_five_good:
 
     Tr "I still don’t know what’s going on but I can understand glimpses of it."
 
-    An "Ana, you don’t have to choose for me."
+    Tr "Ana, you don’t have to choose for me."
 
     An "I’m choosing for myself."
 
-    An "Do you not wish for it too? To live as yourself? To not be forgotten?"
+    An "Do you not wish for it too?{w=[q]} To live as yourself?{w=[q]} To not be forgotten?"
 
     Tr "I wish for it, but will I gain such a wish?"
 
     Tr "Who am I to receive such a wish?"
 
-    An "You are Trina Yagnenok. But that is not your full name, is it?"
+    An "You are Trina Yagnenok.{w=[q]} But that is not your full name, is it?"
 
-    Tr "It’s… Katherine Elizabeth Yagnenok. My mother picked it for me, 
+    Tr "It’s…{w=[q]} Katherine Elizabeth Yagnenok.{w=[q]} My mother picked it for me, 
     she loved how it sounded, and if I’m being honest, so do I."
 
     Tr "But it’s been long since she died."
 
     Tr "All she ever gave me was my ability to read, and this name."
 
-    An "Then… that name will be remembered. And so will your mother, and so will everyone."
+    An "Then…{w=[q]} that name will be remembered.{w=[q]} And so will your mother, and so will everyone."
+
+    show ana_h at right
+    hide ana
 
     An "We’ll be okay."
 
-    Ax "This is your decision, then. For no one to be forgotten?"
+    Ax "This is your decision, then.{w=[q]} For no one to be forgotten?"
 
     Ax "To let time pass on the eternal empire?"
 
     Ax "To let it crumble like everything else?"
 
-    An "We’ve been dancing for far too long. Our legs have gone numb, it’s time for us to take a break, right?"
+    An "We’ve been dancing for far too long.{w=[q]} Our legs have gone numb, it’s time for us to take a break, right?"
 
     An "Let’s go, Alexei."
 
@@ -689,18 +747,17 @@ label chapter_five_good:
 
     Ax "At least you made me feel like a child."
 
-    Ax "Thank you."
-
-    Ax "And goodbye. Don’t forget about me."
+    Ax "Thank you.{w=[q]} And goodbye.{w=[q]} Don’t forget about me."
 
     An "I won’t."
 
     stop music
     hide alx2
     show palace_ballroom_gd
+    play sound "Crash.ogg"
     with fade
 
-    "Alexei’s essence slowly faded out of existence.
+    "Alexei’s essence slowly faded out of existence.{w=[q]}
     He took with him the splendor that pervaded the ballroom, as the lights slowly went out,
     and the dancers stopped in their tracks."
 
@@ -708,17 +765,17 @@ label chapter_five_good:
 
     Tr "So what’s your plan, duchess?"
 
-    "The golden pool’s liquid seemed less like blood and more like water. Purified, clear."
+    "The golden pool’s liquid seemed less like blood and more like water.{w=[q]} Purified, clear."
 
     An "Shall we take a dive?"
 
-    Tr "Heh. Even after saying all of that, at the end of it, we’re just going to die still, huh?"
+    Tr "Heh.{w=[q]} Even after saying all of that, at the end of it, we’re just going to die still, huh?"
 
     An "At the very least, it’s on our own terms."
 
     An "That’s more than anyone else could have."
 
-    Tr "I suppose so. Shall we?"
+    Tr "I suppose so.{w=[q]} Shall we?"
 
     An "We shall."
 

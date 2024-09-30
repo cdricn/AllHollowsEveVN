@@ -6,8 +6,8 @@ label chapter_four:
     hide alx
     hide ana
     show palace_hallway
-    show ana at right
-    show trina at left
+    show ana_w at right
+    show trina_s at left
     with vpunch
     
     An "!"
@@ -24,6 +24,9 @@ label chapter_four:
 
     Tr "I was thinking you’d immediately know wh--"
 
+    show ana_s at right
+    hide ana_w
+
     An "Urk!"
 
     "We were in the royal palace.{w=[q]} I could tell from the splendor that surrounded us."
@@ -39,6 +42,9 @@ label chapter_four:
 
     An "A--"
 
+    show trina_w at left
+    hide trina_s
+
     Tr "Ana, calm down."
 
     Tr "I don’t know what happened either, but the moment we entered the Cathedral we just woke up here."
@@ -46,6 +52,9 @@ label chapter_four:
     An "Eugh.{w=[q]} I didn’t think I would be back in this place so soon."
 
     Tr "If anything, we’re still under the cave.{w=[q]} So maybe this is what’s inside of the Cathedral."
+
+    show ana_w at right
+    hide ana_s
 
     An "Is that so..."
 
@@ -56,7 +65,10 @@ label chapter_four:
 
     "It was real.{w=[q]} The underground Cathedral’s interiors were similar to the Palace of the royal family, my home."
 
-    Tr "Also, something was chasing us"
+    Tr "Also, something was chasing us."
+
+    show ana_s at right
+    hide ana_w
 
     An "HUH?!"
 
@@ -67,11 +79,14 @@ label chapter_four:
 
     Tr "So we’re safe, for now."
 
+    show ana_w at right
+    hide ana_s
+
     An "Thank you, Trina."
 
     An "But we can’t stay here.{w=[q]} This hallway can’t be where we’ll “Do” the “Rite” after all."
 
-    Tr "?{w=[q]} How did you do that with you--"
+    Tr "Eh?{w=[q]} How did you do that with you--"
 
     Tr "Nevermind.{w=[q]} Yes, let’s go."
 
@@ -109,8 +124,8 @@ label chapter_four:
     but seeing as this was closest, I went ahead and opened it."
     
     play sound "Walk.ogg"
-    hide ana
-    hide trina
+    hide ana_w
+    hide trina_w
     show palace_baseclosed
     show ana at right
     show trina at left
@@ -257,6 +272,9 @@ label chapter_four_part2:
 
     An "They go to war."
 
+    show trina_s at left
+    hide trina
+
     $ renpy.choice_for_skipping()
     menu:
         Tr "I suppose. Still, you choose."
@@ -277,15 +295,24 @@ label chapter_four_fail:
     "It looked as though the light of the torches stopped at a certain point.{w=[q]}
     As if the shadow actively ate away at the light."
 
+    play sound "Hit.ogg"
+    ""
+
     "I reached for the golden handle, and tried to push it open."
 
     "But it wouldn’t budge."
+
+    play sound "Hit.ogg"
+    ""
 
     "I tried again, and again, and again.{w=[q]} Yet it still wouldn’t budge."
 
     "Worse still, the music inside grew fainter."
 
     "Something was dying in there."
+
+    show ana_w at right
+    hide ana
 
     An "L-let’s go."
 
@@ -350,7 +377,7 @@ label chapter_four_pass:
 label chapter_four_part3:
     $ renpy.choice_for_skipping()
     play sound "Walk.ogg"
-    hide trina
+    hide trina_s
     hide ana
     show palace_artroom
     show ana at right
@@ -362,6 +389,9 @@ label chapter_four_part3:
     It imitated the moon, yet was significantly dimmer."
 
     "At the far end of the hallway was a portrait.{w=[q]} A family portrait."
+
+    show trina_w at left
+    hide trina
 
     "I approached it, careful with each step.{w=[q]} I could hear Trina trailing behind me."
     
@@ -452,7 +482,7 @@ label chapter_four_part3:
 
     An "T-trina.{w=[q]} Please."
 
-    Tr " I got you!"
+    Tr "I got you!"
 
     "She held on to my waists and pulled me away.{w=[q]} Nothing restricted my legs,
     so it seemed she just carried me away."

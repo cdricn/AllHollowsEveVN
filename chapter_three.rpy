@@ -3,10 +3,10 @@ label chapter_three:
     $ renpy.choice_for_skipping()
     play music "Sample2.ogg" loop
     play sound "Walk.ogg"
-    hide trina
+    hide trina_s
     hide ana
     show palace_outside
-    show ana at right
+    show ana_w at right
     show trina at left
     with fade
 
@@ -151,6 +151,8 @@ label chapter_three:
             jump chapter_three_plus
 
 label chapter_three_minus:
+    show ana_h at right
+    hide ana_w
     An "Even if that’s the case, I have you now."
 
     An "And you’ll protect me, right?"
@@ -178,6 +180,8 @@ label chapter_three_minus:
     jump chapter_three_part2
 
 label chapter_three_plus:
+    show ana_h at right
+    hide ana_w
     An "Even if that’s the case, we have each other now."
 
     An "Even if, right now, it’s just a matter of circumstance, I think we can work decently well together."
@@ -217,6 +221,7 @@ label chapter_three_part2:
     "--I pushed open the door, and entered the Cathedral."
     #procession bg, black if no time
     hide ana
+    hide ana_h
     hide trina
     scene black
     with fade

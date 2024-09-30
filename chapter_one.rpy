@@ -2,7 +2,7 @@
 label chapter_one:
     $ renpy.choice_for_skipping()
     show house_night
-    show ana at center
+    show ana_s at center
     play sound "Hit.ogg"
     with vpunch
 
@@ -11,12 +11,15 @@ label chapter_one:
 
     show trina at left
     with moveinleft
-    show ana at right
+    show ana_s at right
     with moveinleft
 
     Tr "Gah!"
 
     An "...Huh?{w=[s]} Where…{w=[s]} Where am I?"
+
+    show ana_w at right
+    hide ana_s
 
     "My eyes gradually came into focus as I looked around.{w=[q]}
     Beside me a candle light dimly glows.{w=[q]}
@@ -78,7 +81,7 @@ label chapter_one:
 
     An "Wait!"
 
-    show ana at hide_L
+    show ana_w at hide_L
     with moveinright
 
     $ renpy.choice_for_skipping()
@@ -86,7 +89,7 @@ label chapter_one:
     with fade
 
     ""
-    show ana at right
+    show ana_w at right
     with moveinright
 
     An "Hey!{w=[q]} At least tell me what that rite is.{w=[q]} Am I going to die here too?"
@@ -113,6 +116,9 @@ label chapter_one:
 
     Tr "You’re the duchess!{w=[q]} Even if you mess up,
     people will think it’s part of the rite."
+
+    show ana at right
+    hide ana_w
 
     An "I see..."
 
@@ -193,7 +199,12 @@ label chapter_one:
 
     Vl1 "It is an honor."
 
-    An "H-hello!{w=[q]} Hey wait.{w=[q]} Why are you all kneeling?"
+    An "H-hello!{w=[q]}"
+
+    show ana_w at right
+    hide ana
+
+    An "Hey wait.{w=[q]} Why are you all kneeling?"
 
     An "You too, Trina?"
 
@@ -221,7 +232,7 @@ label chapter_one:
 
     "They all stood up in front of the stage and stared, expectant of my words."
 
-    show ana at center
+    show ana_w at center
     with moveinright
 
     An "U-uhm.{w=[q]} Good evening, everyone! As you may know, I am your Duchess Anastasia Konstantin."
@@ -307,10 +318,13 @@ label chapter_one:
     with vpunch
     ""
 
+    show ana_s at center
+    hide ana_w
+
     An "Eek!"
 
     play music "Sample2.ogg" loop
-    show ana at right
+    show ana_s at right
     with moveinleft
     show rev_L at left
     with moveinleft
@@ -341,7 +355,7 @@ label chapter_one:
 
     Vl2 "Please.{w=[q]} Run."
 
-    show ana at hide_R
+    show ana_s at hide_R
     with moveinleft
     show vil_m at hide_L
     with moveinright

@@ -6,7 +6,7 @@ label chapter_two:
     with fade
 
     ""
-    show ana at right
+    show ana_w at right
     with moveinright
 
     An "Haah..."
@@ -26,15 +26,20 @@ label chapter_two:
     with vpunch
     Ex "HEY! WAIT!"
 
+    show ana_s at right
+    hide ana_w
     An "Eek!"
 
     Ex "Duchess! Wait!{w=[q]} It’s me!"
+
+    show ana_w at right
+    hide ana_s
 
     An "That voice..."
 
     An "Trina?"
 
-    show trina at left
+    show trina_w at left
     with moveinleft
 
     Tr "Haah… I’m glad to see you’re safe.{w=[q]} But you do run fast."
@@ -44,6 +49,9 @@ label chapter_two:
     An "But why did you follow me? It’s not safe, you know."
 
     An "But then again, it’s no less safer here than back there."
+
+    show trina at left
+    hide trina_w
 
     Tr "Haha. That’s exactly why!{w=[q]}
     I thought during that entire chaos that if I were to die,
@@ -62,6 +70,9 @@ label chapter_two:
 
     Tr "I’ve seen animal burrows deeper than that cave!"
 
+    show ana at right
+    hide ana_w
+
     An "Is that so?"
 
     An "I wonder now if that cave will actually keep me safe."
@@ -73,10 +84,11 @@ label chapter_two:
     play sound "Walk.ogg"
     show trina at hide_L
     with moveinright
+    show ana_h at right
     An "Heh… thanks, Trina."
 
     #--mono
-
+    hide ana_h
     show ana at center
     with moveinright
 
@@ -122,6 +134,8 @@ label chapter_two:
 
     "And yet there’s a growing pit of anxiety welling within me."
 
+    show ana_w at right
+    hide ana
     "{i}This isn’t the way.{/i}"
 
     "Two different gravitational pulls, each pulling me towards separate places.{w=[q]}
@@ -233,18 +247,21 @@ label cave_entrance_pass:
 
     An "They don’t care about me for anything other than my name."
 
+    show trina_s at left
+    hide trina
+
     Tr "Huh, I see."
 
     Tr "I can’t really understand the relationship between you and others."
 
     Tr "Do you not have friends back home?"
 
-    hide trina
+    hide trina_s
     hide ana
     play sound "Walk.ogg"
     show cave_hallway2
     show ana at right
-    show trina at left
+    show trina_s at left
     with fade
 
     An "Friends..."
@@ -278,7 +295,13 @@ label cave_entrance_pass:
     Tr "I see. I won’t pretend to understand your troubles so,
     perhaps I can ask more about the things you’ve read."
 
+    show trina at left
+    hide trina_s
+
     Tr "You know, despite how it is, I actually know how to read! My mother taught me!"
+
+    show ana_h at right
+    hide ana
 
     An "Oh! Well. It was mostly biological textbooks I found in our expansive library."
 
@@ -292,7 +315,13 @@ label cave_entrance_pass:
 
     An "It was fun.{w=[q]} A fun I would never get from being around my sisters.{w=[s]} Or my father."
 
+    show ana at right
+    hide ana_h
+
     An "But that’s in the past now."
+
+    show trina_s at left
+    hide trina
 
     Tr "You’re really just saying that aren’t you?"
 
@@ -323,7 +352,7 @@ label cave_entrance_pass:
 
 label cave_entrance_fail:
     #--run fx
-    show ana at hide_L
+    show ana_w at hide_L
     with moveinright
     show trina at hide_L
     with moveinright
@@ -338,9 +367,9 @@ label cave_entrance_fail:
 
     "Whatever it was that I felt, it wasn’t good. This was the better choice."
     
-    show ana at right
+    show ana_w at right
     with moveinright
-    show trina at left
+    show trina_w at left
     with moveinleft
 
     Tr "H-hey! Where are we going?!{w=[q]} The cave’s right there!"
